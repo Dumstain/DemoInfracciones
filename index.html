@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Infracciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Registro de Infracciones</h1>
+        <div class="filter-option">
+            <button id="category-selection">Seleccionar Categoría</button>
+            <button id="manual-entry">Ingreso Manual</button>
+        </div>
+
+        <div class="category-selection" style="display:none;">
+            <select id="categories">
+                <option value="">Seleccione una categoría...</option>
+                <option value="Control Vehicular">Control Vehicular</option>
+                <option value="Equipo para la Circulación de Vehículos">Equipo para la Circulación de Vehículos</option>
+                <option value="Ascenso y Descenso de Pasajeros">Ascenso y Descenso de Pasajeros</option>
+            </select>
+            <select id="infracciones" style="display:none;">
+                <!-- Las opciones de infracciones se llenarán dinámicamente basadas en la categoría seleccionada -->
+            </select>
+        </div>
+        <div id="infraccionDetalle" class="form-item" style="display:none;">
+            <!-- Aquí se mostrarán los detalles de la infracción seleccionada -->
+        </div>
+        
+        <div class="manual-input" style="display:none;">
+            <div class="form-item">
+                <select id="manualArticle">
+                    <option value="">Seleccione un Artículo...</option>
+                    <!-- Opciones de Artículo aquí -->
+                </select>
+            </div>
+            <div class="form-item">
+                <select id="manualFraction">
+                    <option value="">Seleccione una Fracción...</option>
+                    <!-- Opciones de Fracción aquí -->
+                </select>
+            </div>
+            <div class="form-item">
+                <select id="manualIncise">
+                    <option value="">Seleccione un Inciso (Solo si aplica)...</option>
+                    <!-- Opciones de Inciso aquí -->
+                </select>
+            </div>
+            <div class="form-item">
+                <input type="text" id="manualReason" placeholder="Motivo">
+            </div>
+            <button id="submitManual">Registrar Infracción</button>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
